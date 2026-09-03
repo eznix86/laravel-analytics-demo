@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a55a8950b9d54138cd1e86ccac4df711",
+    "content-hash": "2bf51b617432fe359355a17a7590ddc3",
     "packages": [
         {
             "name": "brick/math",
@@ -564,11 +564,17 @@
         },
         {
             "name": "eznix86/laravel-analytics",
-            "version": "dev-main",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eznix86/laravel-analytics.git",
+                "reference": "41ab82d3e5ea16979abbddb1e5a5d61d9cfa93c8"
+            },
             "dist": {
-                "type": "path",
-                "url": "../laravel-analytics",
-                "reference": "a5f40d4209012aa99d7d4c60872c0100883261d2"
+                "type": "zip",
+                "url": "https://api.github.com/repos/eznix86/laravel-analytics/zipball/41ab82d3e5ea16979abbddb1e5a5d61d9cfa93c8",
+                "reference": "41ab82d3e5ea16979abbddb1e5a5d61d9cfa93c8",
+                "shasum": ""
             },
             "require": {
                 "doctrine/sql-formatter": "^1.5",
@@ -595,62 +601,14 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Eznix86\\LaravelAnalytics\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
-            },
-            "autoload-dev": {
+                ],
                 "psr-4": {
-                    "Eznix86\\LaravelAnalytics\\Tests\\": "tests/",
-                    "Workbench\\App\\": "workbench/app/",
-                    "Workbench\\Database\\Factories\\": "workbench/database/factories/",
-                    "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+                    "Eznix86\\LaravelAnalytics\\": "src/"
                 }
             },
-            "scripts": {
-                "post-autoload-dump": [
-                    "@clear",
-                    "@prepare"
-                ],
-                "prepare": [
-                    "@php vendor/bin/testbench package:discover --ansi"
-                ],
-                "build": [
-                    "@php vendor/bin/testbench workbench:build --ansi"
-                ],
-                "serve": [
-                    "Composer\\Config::disableProcessTimeout",
-                    "@build",
-                    "@php vendor/bin/testbench serve --ansi"
-                ],
-                "lint": [
-                    "vendor/bin/pint --parallel"
-                ],
-                "lint:check": [
-                    "vendor/bin/pint --parallel --test"
-                ],
-                "analyse": [
-                    "vendor/bin/phpstan analyse"
-                ],
-                "test:types": [
-                    "vendor/bin/pest --type-coverage --min=100"
-                ],
-                "test:unit": [
-                    "vendor/bin/pest --parallel"
-                ],
-                "test": [
-                    "@analyse",
-                    "@lint:check",
-                    "@test:types",
-                    "@test:unit"
-                ],
-                "clear": [
-                    "@php vendor/bin/testbench package:purge-skeleton --ansi"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -671,10 +629,17 @@
                 "laravel-analytics",
                 "sql"
             ],
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/eznix86/laravel-analytics/issues",
+                "source": "https://github.com/eznix86/laravel-analytics/tree/v0.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/eznix86",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-09-03T20:23:15+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -9891,11 +9856,9 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "eznix86/laravel-analytics": 20
-    },
-    "prefer-stable": true,
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.3"

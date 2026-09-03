@@ -10,7 +10,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.3",
-        "eznix86/laravel-analytics": "@dev",
+        "eznix86/laravel-analytics": "^0.2.0",
         "laravel/framework": "^13.17",
         "laravel/tinker": "^3.0"
     },
@@ -86,16 +86,5 @@
             "pestphp/pest-plugin": true,
             "php-http/discovery": true
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../laravel-analytics",
-            "options": {
-                "symlink": true
-            }
-        }
-    ]
+    }
 }
