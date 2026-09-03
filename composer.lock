@@ -564,16 +564,16 @@
         },
         {
             "name": "eznix86/laravel-analytics",
-            "version": "v0.2.0",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eznix86/laravel-analytics.git",
-                "reference": "41ab82d3e5ea16979abbddb1e5a5d61d9cfa93c8"
+                "reference": "22db26fc8a31d1e4ec754cb016bb5ce077d6d730"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eznix86/laravel-analytics/zipball/41ab82d3e5ea16979abbddb1e5a5d61d9cfa93c8",
-                "reference": "41ab82d3e5ea16979abbddb1e5a5d61d9cfa93c8",
+                "url": "https://api.github.com/repos/eznix86/laravel-analytics/zipball/22db26fc8a31d1e4ec754cb016bb5ce077d6d730",
+                "reference": "22db26fc8a31d1e4ec754cb016bb5ce077d6d730",
                 "shasum": ""
             },
             "require": {
@@ -631,7 +631,7 @@
             ],
             "support": {
                 "issues": "https://github.com/eznix86/laravel-analytics/issues",
-                "source": "https://github.com/eznix86/laravel-analytics/tree/v0.2.0"
+                "source": "https://github.com/eznix86/laravel-analytics/tree/v0.2.1"
             },
             "funding": [
                 {
@@ -639,7 +639,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-03T20:23:15+00:00"
+            "time": "2026-09-03T20:36:21+00:00"
         },
         {
             "name": "fruitcake/php-cors",
