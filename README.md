@@ -2,8 +2,15 @@
 
 Exercises `eznix86/laravel-analytics` against real PostgreSQL, MySQL, and SQLite servers.
 
-The package is linked as a path repository from `../laravel-analytics`, so edits there are picked up
-without reinstalling.
+The package is installed as a symlinked path repository from `../laravel-analytics`, so edits there
+are picked up with no reinstall. Clone both repositories side by side.
+
+To check a published release instead, drop the repository and require a version:
+
+```bash
+composer config --unset repositories.0
+composer require eznix86/laravel-analytics:^0.2
+```
 
 ## Setup
 
@@ -76,6 +83,8 @@ php artisan analytics:test
 ```
 
 ## Checking the Package
+
+Run the package's own suite from a local checkout:
 
 ```bash
 cd ../laravel-analytics && composer test
