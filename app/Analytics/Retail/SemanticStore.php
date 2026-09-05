@@ -19,11 +19,25 @@ class SemanticStore extends Model implements AnalyticsModel
 
     public function computes(): string
     {
-        return 'select s.store_id, s.sqft, s.country, s.region, s.is_active, s.ds, '
-            ."case when s.country in ('MU', 'ZA') then 'AFRICA' "
-            ."when s.country in ('GB', 'FR') then 'EUROPE' else 'OTHER' end as country_group, "
-            ."case when s.sqft < 1000 then 'small' "
-            ."when s.sqft < 5000 then 'medium' else 'large' end as floor_size "
-            .'from '.$this->ref(Store::class).' s';
+        return <<<SQL
+            select
+                s.store_id,
+                s.sqft,
+                s.country,
+                s.region,
+                s.is_active,
+                s.ds,
+                case
+                    when s.country in ('MU', 'ZA') then 'AFRICA'
+                    when s.country in ('GB', 'FR') then 'EUROPE'
+                    else 'OTHER'
+                end as country_group,
+                case
+                    when s.sqft < 1000 then 'small'
+                    when s.sqft < 5000 then 'medium'
+                    else 'large'
+                end as floor_size
+            from {$this->ref(Store::class)} s
+        SQL;
     }
 }
